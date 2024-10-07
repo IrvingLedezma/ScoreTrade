@@ -199,7 +199,7 @@ if "message" not in st.session_state:
 if "show_animation" not in st.session_state:
     st.session_state.show_animation = True
 if "folder_path" not in st.session_state:
-    st.session_state.folder_path = 'C:/Users/irvin/OneDrive/Desktop/python_scripts/codigo_proyecto_aplicacion/modelos'
+    st.session_state.folder_path = './modelos'
 if "tickets_nacionales" not in st.session_state:
     st.session_state.tickets_nacionales = ['ALPEKA.MX', 'GFINBURO.MX', 'ASURB.MX', 'MEGACPO.MX', 'FEMSAUBD.MX', 'BOLSAA.MX']
 if "tickets_internacionales" not in st.session_state:

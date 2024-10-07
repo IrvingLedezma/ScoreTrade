@@ -1,21 +1,21 @@
-﻿mercado,tipo,ticket,valor,delta
-nacional,bsscore1,Walmart,73,66
-nacional,bsscore2,Traxiona,80,20
-nacional,bsscore3,Gentera,81,-16
-nacional,bsscore4,Bimbo,90,-41
-nacional,bsscore5,Peñoles,93,-1
-nacional,ssscore1,Walmart,31,8
-nacional,ssscore2,Traxiona,5,5
-nacional,ssscore3,Gentera,32,36
-nacional,ssscore4,Bimbo,95,-45
-nacional,ssscore5,Peñoles,34,73
-internacional,bsscore1,Walmart,39,-25
-internacional,bsscore2,Traxiona,38,-59
-internacional,bsscore3,Gentera,2,-20
-internacional,bsscore4,Bimbo,52,-27
-internacional,bsscore5,Peñoles,13,71
-internacional,ssscore1,Walmart,43,29
-internacional,ssscore2,Traxiona,29,47
-internacional,ssscore3,Gentera,31,6
-internacional,ssscore4,Bimbo,28,26
-internacional,ssscore5,Peñoles,94,1
+mercado,tipo,ticket,valor,delta
+nacional,ssscore1,Grupo Aeroportuario del Sureste,45.3,1.0
+nacional,ssscore2,Alfa Corporativo,43.0,-1.7
+nacional,ssscore3,Grupo Financiero Inbursa,42.7,2.6
+nacional,ssscore4,Megacable Holdings,22.9,-14.8
+nacional,ssscore5,Bolsa Mexicana de Valores,20.1,-38.7
+nacional,bsscore1,Fomento Económico Mexicano,90.7,-2.3
+nacional,bsscore2,Bolsa Mexicana de Valores,62.5,4.8
+nacional,bsscore3,Grupo Financiero Inbursa,40.8,0.0
+nacional,bsscore4,Grupo Aeroportuario del Sureste,39.8,-16.8
+nacional,bsscore5,Alfa Corporativo,35.5,-9.6
+internacional,ssscore1,Apple Inc.,41.3,18.6
+internacional,ssscore2,JPMorgan Chase & Co.,40.9,-21.2
+internacional,ssscore3,"Tesla, Inc.",40.8,-0.2
+internacional,ssscore4,Amazon.com Inc.,38.9,5.8
+internacional,ssscore5,NVIDIA Corporation,30.3,-3.7
+internacional,bsscore1,NVIDIA Corporation,69.3,-6.0
+internacional,bsscore2,"Tesla, Inc.",69.2,33.8
+internacional,bsscore3,"Meta Platforms, Inc. (Facebook)",52.5,-27.3
+internacional,bsscore4,JPMorgan Chase & Co.,48.8,-9.2
+internacional,bsscore5,Alphabet Inc. (Google),47.6,0.0

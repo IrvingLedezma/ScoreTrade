@@ -251,7 +251,7 @@ def get_current_date(ticket='WALMEX.MX'):
 @st.cache_data
 def get_metrics():
   dict_data_front = {}
-  for ticket in st.session_state.tickets_nacionales: #+ st.session_state.tickets_internacionales:
+  for ticket in st.session_state.tickets_nacionales + st.session_state.tickets_internacionales:
     dict_data_front[ticket] = {}
 
     with open(f'{st.session_state.folder_path}/{ticket}/data_predict.pkl', 'rb') as f:
@@ -533,27 +533,50 @@ if not st.session_state.ver_tickets:
   # Crear las columnas
   col1, col2, col3, col4, col5 = st.columns(5)
 
-  # Definir métricas en cada columna
   with col1:
-      st.metric(label=f"{topdf[topdf['tipo']=='bsscore1']['ticket'].values[0]}", 
-                value=f"{topdf[topdf['tipo']=='bsscore1']['valor'].values[0]}%", 
-                delta=f"{topdf[topdf['tipo']=='bsscore1']['delta'].values[0]}%")
+      valor_bsscore1 = round(topdf[topdf['tipo']=='bsscore1']['valor'].values[0], 1)
+      delta_bsscore1 = round(topdf[topdf['tipo']=='bsscore1']['delta'].values[0], 1)
+      st.metric(
+          label=f"{topdf[topdf['tipo']=='bsscore1']['ticket'].values[0]}", 
+          value=f"{valor_bsscore1}%", 
+          delta=f"{delta_bsscore1}%"
+      )
+
   with col2:
-      st.metric(label=f"{topdf[topdf['tipo']=='bsscore2']['ticket'].values[0]}", 
-                value=f"{topdf[topdf['tipo']=='bsscore2']['valor'].values[0]}%", 
-                delta=f"{topdf[topdf['tipo']=='bsscore2']['delta'].values[0]}%")
+      valor_bsscore2 = round(topdf[topdf['tipo']=='bsscore2']['valor'].values[0], 1)
+      delta_bsscore2 = round(topdf[topdf['tipo']=='bsscore2']['delta'].values[0], 1)
+      st.metric(
+          label=f"{topdf[topdf['tipo']=='bsscore2']['ticket'].values[0]}", 
+          value=f"{valor_bsscore2}%", 
+          delta=f"{delta_bsscore2}%"
+      )
+
   with col3:
-      st.metric(label=f"{topdf[topdf['tipo']=='bsscore3']['ticket'].values[0]}", 
-                value=f"{topdf[topdf['tipo']=='bsscore3']['valor'].values[0]}%", 
-                delta=f"{topdf[topdf['tipo']=='bsscore3']['delta'].values[0]}%")
+      valor_bsscore3 = round(topdf[topdf['tipo']=='bsscore3']['valor'].values[0], 1)
+      delta_bsscore3 = round(topdf[topdf['tipo']=='bsscore3']['delta'].values[0], 1)
+      st.metric(
+          label=f"{topdf[topdf['tipo']=='bsscore3']['ticket'].values[0]}", 
+          value=f"{valor_bsscore3}%", 
+          delta=f"{delta_bsscore3}%"
+      )
+
   with col4:
-      st.metric(label=f"{topdf[topdf['tipo']=='bsscore4']['ticket'].values[0]}", 
-                value=f"{topdf[topdf['tipo']=='bsscore4']['valor'].values[0]}%", 
-                delta=f"{topdf[topdf['tipo']=='bsscore4']['delta'].values[0]}%")
+      valor_bsscore4 = round(topdf[topdf['tipo']=='bsscore4']['valor'].values[0], 1)
+      delta_bsscore4 = round(topdf[topdf['tipo']=='bsscore4']['delta'].values[0], 1)
+      st.metric(
+          label=f"{topdf[topdf['tipo']=='bsscore4']['ticket'].values[0]}", 
+          value=f"{valor_bsscore4}%", 
+          delta=f"{delta_bsscore4}%"
+      )
+
   with col5:
-      st.metric(label=f"{topdf[topdf['tipo']=='bsscore5']['ticket'].values[0]}", 
-                value=f"{topdf[topdf['tipo']=='bsscore5']['valor'].values[0]}%", 
-                delta=f"{topdf[topdf['tipo']=='bsscore5']['delta'].values[0]}%")
+      valor_bsscore5 = round(topdf[topdf['tipo']=='bsscore5']['valor'].values[0], 1)
+      delta_bsscore5 = round(topdf[topdf['tipo']=='bsscore5']['delta'].values[0], 1)
+      st.metric(
+          label=f"{topdf[topdf['tipo']=='bsscore5']['ticket'].values[0]}", 
+          value=f"{valor_bsscore5}%", 
+          delta=f"{delta_bsscore5}%"
+      )
 
   # Título para las métricas
   st.markdown(f"<h2 style='font-size: 1.1em;'>⛔ Top 5 Selling Score (Mayor probabilidad de baja de precio)  {date_updt_str}</h2>", unsafe_allow_html=True, help="Esto es una ayuda")
